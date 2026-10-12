@@ -1,0 +1,3 @@
+Reserved for future staff-related files (e.g. staff profile photos, internal
+documents) -- not yet written to by any code. Protected by storage/.htaccess
+(Require all denied), same as storage/uploads/.

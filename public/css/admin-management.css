@@ -1,0 +1,64 @@
+/* Consistent management layouts for all pages reached from the admin sidebar. */
+.admin-portal .portal-main :is(.btn-navy, .btn-outline, .btn-red, .btn-danger-outline) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 10px 16px !important;
+  border-radius: 10px;
+  font-size: 13px !important;
+  font-weight: 600;
+  line-height: 1.4;
+  text-decoration: none;
+  transition: background-color .16s ease, border-color .16s ease, box-shadow .16s ease;
+}
+.admin-portal .portal-main .btn-navy { border: 1px solid var(--navy); box-shadow: 0 3px 8px rgb(27 58 107 / 12%); }
+.admin-portal .portal-main .btn-outline { background: #fff; border: 1px solid #cbd7e6; color: #29486c; }
+.admin-portal .portal-main .btn-outline:hover { background: #edf3fa; border-color: #8ea7c6; }
+.admin-portal .portal-main .btn-danger-outline { background: #fff7f7; border-color: #edcaca; color: #a52b32; }
+.admin-portal .portal-main .btn-danger-outline:hover { background: #fde7e8; border-color: #cf7a81; }
+.admin-portal .portal-main :is(a, button, summary):focus-visible { outline: 3px solid #6586b1; outline-offset: 3px; }
+.admin-portal .portal-main nav a.status-pill { min-height: 40px; padding: 8px 12px; border: 1px solid #dfe6ef; border-radius: 9px; }
+.admin-portal .portal-main .table-responsive,
+.admin-portal .admin-list-scroll { max-height: 580px; overflow: auto; scrollbar-width: thin; border: 1px solid #dfe6ef; border-radius: 12px; background: #fff; }
+.admin-portal .admin-list-scroll:focus-visible { outline: 3px solid #6586b1; outline-offset: 3px; }
+.admin-portal .portal-main .table { margin-bottom: 0; font-size: 13px; --bs-table-border-color: #e7edf5; }
+.admin-portal .portal-main .table > :not(caption) > * > * { padding: 12px; vertical-align: middle; }
+.admin-portal .portal-main .table thead th { position: sticky; top: 0; z-index: 1; background: #f0f4f9; color: #49617e; font-size: 11px; text-transform: uppercase; letter-spacing: .4px; white-space: nowrap; }
+.admin-portal .portal-main .table tbody tr:hover > * { background: #f8fafd; }
+.admin-portal .admin-list-meta { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; font-size: 12px; color: var(--muted); margin: 0 2px 12px; }
+.admin-portal .admin-cell-title { display: block; color: var(--navy); font-weight: 600; overflow-wrap: anywhere; }
+.admin-portal .admin-cell-meta { color: var(--muted); font-size: 11px; line-height: 1.5; margin-top: 4px; overflow-wrap: anywhere; }
+.admin-portal .admin-list-scroll > :is(.app-card, .eligibility-log-card, .review-row, .case-entry) { margin: 0; border: 0; border-bottom: 1px solid #e7edf5; border-radius: 0; box-shadow: none; padding: 14px; }
+.admin-portal .admin-list-scroll > :last-child { border-bottom: 0; }
+.admin-portal details.admin-editor { border: 1px solid #dfe6ef; border-radius: 12px; background: #fff; margin-bottom: 10px; padding: 0; overflow: hidden; }
+.admin-portal details.admin-editor > summary { cursor: pointer; padding: 15px 18px; font-size: 13px; font-weight: 600; color: var(--navy); background: #f8fafd; }
+.admin-portal details.admin-editor > summary:hover { background: #edf3fa; }
+.admin-portal details.admin-editor[open] > summary { border-bottom: 1px solid #e7edf5; }
+.admin-portal .admin-editor-content { padding: 18px; }
+.admin-portal .admin-editor-content > :last-child { margin-bottom: 0; }
+.admin-portal .settings-grid { align-items: start; }
+.admin-portal .sms-message-details { min-width: 170px; max-width: 300px; }
+.admin-portal .sms-message-details summary { cursor: pointer; color: var(--navy); font-size: 12px; }
+.admin-portal .sms-message-details .sms-message-text { margin-top: 8px; white-space: pre-wrap; overflow-wrap: anywhere; }
+.admin-portal .sms-template-list { max-height: 460px; overflow: auto; padding: 3px; scrollbar-width: thin; }
+.admin-portal .sms-stats .dash-card { padding: 14px 18px; }
+.admin-portal .portal-main .notif-item { padding: 14px; margin-bottom: 10px; }
+.admin-portal .user-management .user-table-actions .user-icon-action { padding: 8px !important; }
+.admin-portal .user-management .user-action-success { background: #f1faf5; border-color: #b9d9c6; color: #216744; }
+.admin-portal .user-management .user-action-warning { background: #fffbef; border-color: #dfcd9f; color: #805914; }
+@media (max-width: 575px) {
+  .admin-portal .portal-main .table { min-width: 580px; }
+  .admin-portal .admin-editor-content { padding: 14px; }
+  .admin-portal .admin-editor > summary { padding: 14px; }
+  .admin-portal .admin-list-scroll { max-height: 500px; }
+  .admin-portal .sms-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .admin-portal .portal-main :is(.btn-navy, .btn-outline, .btn-red, .btn-danger-outline) { transition: none; }
+}
+@media print {
+  .admin-portal .portal-main .table-responsive, .admin-portal .admin-list-scroll, .admin-portal .sms-template-list { max-height: none; overflow: visible; }
+  .admin-portal .portal-main .table thead th { position: static; }
+}

@@ -1,0 +1,3 @@
+# Internal code only -- included by the public entry-point pages, never
+# requested directly. Blocks direct access to source, SQL, and cron scripts.
+Require all denied

@@ -1,0 +1,7 @@
+<?php
+require __DIR__ . '/../config/database.php';
+require __DIR__ . '/../includes/functions.php';
+require __DIR__ . '/../includes/csrf.php';
+require __DIR__ . '/../controllers/AdminController.php';
+
+(new AdminController($pdo))->faq();

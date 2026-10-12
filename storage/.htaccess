@@ -1,0 +1,4 @@
+# Uploaded applicant documents must never be served directly by Apache.
+# All downloads go through download.php, which checks the requester is
+# either the owning applicant or MSWDO staff before streaming the file.
+Require all denied

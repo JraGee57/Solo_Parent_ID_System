@@ -1,0 +1,9 @@
+{
+    "name": "mswdo-virac/solo-parent-portal",
+    "description": "Virac Solo Parent ID Online Portal",
+    "type": "project",
+    "require": {
+        "php": ">=8.0",
+        "endroid/qr-code": "^5.0"
+    }
+}

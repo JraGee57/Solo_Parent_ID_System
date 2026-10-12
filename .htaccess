@@ -1,0 +1,16 @@
+# No directory listings anywhere (e.g. /public/css/, /assets/images/).
+Options -Indexes
+
+# Hidden files and folders: .git (the full source history), .htaccess, local env files.
+RedirectMatch 404 /\.(git|svn|env)(/|$)
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
+
+# Project/support files that are not part of the website.
+<FilesMatch "\.(md|json|lock|sql|log|ini|sh|bak|dist|example\.php)$">
+    Require all denied
+</FilesMatch>
+
+# Composer dependencies are PHP libraries loaded by the app, never web pages.
+RedirectMatch 403 ^.*/vendor/

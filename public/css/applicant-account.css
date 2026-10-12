@@ -1,0 +1,92 @@
+.profile-page, .applicant-help-page { max-width: 1240px; margin-inline: auto; }
+.account-eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; color: var(--muted); }
+.profile-workspace { display: grid; grid-template-columns: 300px minmax(0, 1fr); align-items: start; gap: 24px; }
+.profile-sidebar { min-width: 0; border: 1px solid #dce4ef; border-radius: 16px; background: #fff; overflow: hidden; }
+.profile-identity { padding: 24px 22px 20px; background: linear-gradient(135deg, #f2f6fc, #fafcfe); border-bottom: 1px solid #e3eaf4; }
+.profile-identity h3 { margin: 10px 0 6px; font-size: 20px; line-height: 1.4; color: var(--navy); font-weight: 700; overflow-wrap: anywhere; }
+.profile-identity > span { display: inline-block; font-size: 11px; color: #617896; }
+.profile-sidebar .review-card { padding: 20px 22px; border: 0; border-bottom: 1px solid #e8edf4; border-radius: 0; margin: 0; box-shadow: none; }
+.profile-sidebar .review-card:last-child { border-bottom: 0; }
+.profile-page .review-card-head .title { font-size: 15px; color: var(--navy); font-weight: 700; }
+.profile-sidebar .review-card-head { margin-bottom: 14px; }
+.profile-sidebar .review-grid { grid-template-columns: minmax(0, 1fr); gap: 15px; }
+.profile-sidebar .review-row .v { font-size: 13px; overflow-wrap: anywhere; }
+.profile-sidebar .review-row .k { font-size: 11px; color: var(--muted); }
+.profile-sidebar .btn-doc-choose, .profile-sidebar .btn-doc-remove { font-size: 11px; min-height: 36px; border-radius: 7px; }
+.profile-photo-row, .profile-photo-form { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; margin: 0; }
+.profile-sidebar input[type="file"] { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+.profile-sidebar .btn-doc-choose:focus-within { outline: 3px solid #8aa9d5; outline-offset: 3px; }
+.profile-progress { padding: 20px 22px; border-bottom: 1px solid #e8edf4; }
+.profile-progress > div { display: flex; align-items: center; justify-content: space-between; gap: 10px; font-size: 11px; }
+.profile-progress strong { color: #425b7b; font-weight: 600; }
+.profile-progress span { color: #8593a7; font-size: 10px; }
+.profile-progress progress { display: block; width: 100%; height: 6px; margin: 12px 0; appearance: none; border: 0; border-radius: 10px; background: #edf1f7; accent-color: var(--navy); }
+.profile-progress progress::-webkit-progress-bar { background: #edf1f7; border-radius: 10px; }
+.profile-progress progress::-webkit-progress-value { background: var(--navy); border-radius: 10px; }
+.profile-progress progress::-moz-progress-bar { background: var(--navy); border-radius: 10px; }
+.profile-progress p { margin: 0; font-size: 11px; color: var(--muted); line-height: 1.7; }
+.profile-main { min-width: 0; }
+.profile-main .review-card { padding: 24px; border-color: #dce4ef; border-radius: 14px; margin-bottom: 18px; box-shadow: 0 4px 18px rgb(27 58 107 / 3%); }
+.profile-main .review-card-head { padding-bottom: 14px; border-bottom: 1px solid #edf1f7; margin-bottom: 18px; }
+.profile-page .field-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.profile-page .field-label > span { font-size: 12px; font-weight: 600; color: #4a6280; }
+.profile-page .field-label :is(input, select) { min-height: 44px; border-radius: 8px; background: #fbfcfe; border-color: #d6e0ed; font-size: 13px; }
+.profile-page .field-label { min-width: 0; }
+.profile-page .field-label :is(input, select):focus { background: #fff; }
+.profile-save-row { display: flex; align-items: center; flex-wrap: wrap; gap: 14px; margin: 6px 0 24px; }
+.profile-save-row .btn-navy { min-height: 44px; border-radius: 8px; font-size: 13px; padding-inline: 24px; }
+.profile-password-form { display: grid; gap: 16px; }
+.profile-password-form .btn-outline { justify-self: start; min-height: 42px; border-radius: 8px; font-size: 12px; }
+.profile-page #password { scroll-margin-top: 90px; }
+.profile-page .info-box { max-width: none; padding: 14px 16px; font-size: 13px; border-radius: 10px; margin-bottom: 20px; }
+.profile-page .auth-error { font-size: 13px; }
+.help-workspace { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 24px; align-items: start; }
+.help-main { min-width: 0; }
+.help-section-header { margin-bottom: 18px; }
+.help-section-header h3 { font-size: 17px; font-weight: 700; color: var(--navy); margin: 7px 0; }
+.help-section-header p { font-size: 12px; color: var(--muted); line-height: 1.7; margin: 0; }
+.help-resource-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.help-resource-link { display: flex; flex-direction: column; align-items: flex-start; padding: 22px; border: 1px solid #dce4ef; border-radius: 13px; background: #fff; text-decoration: none; box-shadow: 0 4px 18px rgb(27 58 107 / 3%); transition: border-color .15s, background-color .15s; }
+.help-resource-link:hover { border-color: #9cb5d8; background: #f9fbfe; }
+.help-resource-symbol { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 12px; background: #eef3fa; color: var(--navy); margin-bottom: 18px; }
+.help-resource-title { display: flex; width: 100%; justify-content: space-between; align-items: center; gap: 14px; font-size: 14px; font-weight: 700; color: var(--navy); line-height: 1.5; }
+.help-resource-title > span { color: #8a9fba; }
+.help-resource-text { display: block; font-size: 12px; color: var(--muted); line-height: 1.75; margin-top: 8px; }
+.help-process-card { margin-top: 24px; padding: 24px; border: 1px solid #dce4ef; border-radius: 14px; background: #fff; }
+.help-process-steps { padding: 0; margin: 0; list-style: none; }
+.help-process-steps li { display: flex; align-items: flex-start; gap: 16px; position: relative; padding: 4px 0 24px; }
+.help-process-steps li:last-child { padding-bottom: 0; }
+.help-process-steps li:not(:last-child)::before { content: ''; position: absolute; top: 42px; bottom: 4px; left: 18px; width: 1px; background: #e0e8f3; }
+.help-step-number { display: grid; place-items: center; width: 38px; height: 38px; flex: none; border-radius: 11px; background: #f0f4fa; color: var(--navy); font-size: 11px; font-weight: 700; }
+.help-process-steps h4 { font-size: 13px; color: #3e5879; font-weight: 700; margin: 2px 0 6px; }
+.help-process-steps p { font-size: 12px; color: var(--muted); line-height: 1.8; margin: 0; }
+.help-contact-card { min-width: 0; padding: 24px; border: 1px solid #dce4ef; border-radius: 16px; background: #f8fafd; }
+.help-contact-card h3 { margin: 10px 0 6px; font-size: 20px; color: var(--navy); font-weight: 700; }
+.help-office-name { font-size: 12px; color: var(--muted); line-height: 1.7; margin: 0 0 22px; }
+.help-contact-card dl { margin: 0; }
+.help-contact-card dl > div + div { margin-top: 18px; }
+.help-contact-card dt { color: #8595aa; font-size: 11px; font-weight: 500; margin-bottom: 5px; }
+.help-contact-card dd { color: #425d7e; font-size: 13px; line-height: 1.7; margin: 0; overflow-wrap: anywhere; }
+.help-contact-card dd a { color: var(--navy); text-underline-offset: 3px; }
+.help-contact-action { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 12px 14px; margin-top: 24px; border-radius: 8px; background: var(--navy); color: #fff; font-size: 12px; font-weight: 600; text-decoration: none; }
+.help-contact-action:hover { color: #fff; background: #142c52; }
+.help-privacy-note { margin-top: 20px; padding-top: 18px; border-top: 1px solid #e0e7f2; font-size: 11px; line-height: 1.7; color: #7b8da5; }
+.help-privacy-note strong { color: #526a89; font-weight: 600; }
+.help-privacy-note p { margin: 6px 0 0; }
+:is(.profile-page, .applicant-help-page) :is(a, button, input, select):focus-visible { outline: 3px solid #8aa9d5; outline-offset: 3px; }
+@media (max-width: 1000px) { .profile-workspace { grid-template-columns: 260px minmax(0, 1fr); gap: 18px; } .help-workspace { grid-template-columns: minmax(0, 1fr) 280px; gap: 18px; } .help-resource-link { padding: 18px; } }
+@media (max-width: 800px) { .profile-workspace, .help-workspace { grid-template-columns: minmax(0, 1fr); } .profile-sidebar { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); } .profile-identity { grid-column: 1 / -1; } .profile-progress { align-self: start; border-bottom: 0; } .profile-sidebar .review-card:last-child { grid-column: 1 / -1; border-top: 1px solid #e8edf4; } .profile-sidebar .review-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 575px) {
+  .profile-sidebar { display: block; }
+  .profile-sidebar .review-card, .profile-progress, .profile-identity { padding: 18px; }
+  .profile-progress { border-bottom: 1px solid #e8edf4; }
+  .profile-sidebar .review-card:last-child { border-top: 0; }
+  .profile-main .review-card { padding: 18px; }
+  .profile-page .field-grid { grid-template-columns: minmax(0, 1fr); }
+  .profile-page .field-label :is(input, select) { font-size: 16px; min-width: 0; width: 100%; }
+  .profile-save-row .btn-navy { width: 100%; }
+  .help-resource-grid { grid-template-columns: minmax(0, 1fr); }
+  .help-resource-link { padding: 20px; }
+  .help-process-card, .help-contact-card { padding: 20px; }
+}
+@media (prefers-reduced-motion: reduce) { .help-resource-link { transition: none; } }

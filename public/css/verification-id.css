@@ -1,0 +1,66 @@
+/* Only the ID inside the existing QR result. Page and scanner styles stay in style.css. */
+.verification-id {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1659 / 948;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  border-radius: 4px;
+  perspective: 1200px;
+  container-type: inline-size;
+  cursor: pointer;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+.verification-id:focus-visible { outline: 3px solid #234776; outline-offset: 4px; }
+.verification-id-inner {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform .6s ease;
+}
+.verification-id.is-flipped .verification-id-inner { transform: rotateY(180deg); }
+.verification-id-face {
+  display: block;
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #fff;
+  transform: rotateY(0deg);
+}
+.verification-id-back { transform: rotateY(180deg); }
+.verification-id-face > img { display: block; width: 100%; height: 100%; object-fit: fill; }
+.verification-id-field {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #152d4d;
+  font-weight: 600;
+  line-height: 1.2;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+}
+.verification-id-number { left: 76.3%; top: 38.3%; width: 21%; height: 3.2%; font-size: 1.5cqw; }
+.verification-id-name { left: 33%; top: 44.7%; width: 64%; height: 6.3%; font-size: 2.35cqw; font-weight: 700; }
+.verification-id-birth { left: 58%; top: 59.1%; width: 39%; height: 3.4%; font-size: 1.6cqw; }
+.verification-id-address { left: 52%; top: 63.7%; width: 45%; height: 8.2%; align-items: flex-start; font-size: 1.6cqw; }
+.verification-id-category { left: 57%; top: 74.5%; width: 40%; height: 3.8%; font-size: 1.45cqw; }
+.verification-id-expiry { left: 71.5%; top: 91.6%; width: 26%; height: 2.8%; font-size: 1.6cqw; }
+.verification-id-children { position: absolute; left: 3.3%; top: 12.1%; width: 93.4%; height: 38%; display: grid; grid-template-rows: repeat(6, 1fr); }
+.verification-id-child { display: grid; grid-template-columns: 36% 30.6% 33.4%; align-items: center; font-size: 1.65cqw; font-weight: 600; color: #152d4d; line-height: 1.15; }
+.verification-id-child > span { padding: 0 .6cqw; overflow-wrap: anywhere; max-height: 100%; overflow: hidden; }
+.verification-id-more { left: 31%; top: 51.2%; width: 16%; height: 2.8%; font-size: 1.1cqw; }
+.verification-id-emergency-name { left: 10.4%; top: 62.2%; width: 33%; height: 2.5%; font-size: 1.55cqw; }
+.verification-id-emergency-relation { left: 54.2%; top: 62.2%; width: 18.4%; height: 2.5%; font-size: 1.45cqw; }
+.verification-id-emergency-phone { left: 83%; top: 62.2%; width: 14%; height: 2.5%; font-size: 1.2cqw; }
+.verification-id-emergency-address { left: 14%; top: 67%; width: 83%; height: 2.5%; font-size: 1.55cqw; }
+@media (prefers-reduced-motion: reduce) { .verification-id-inner { transition: none; } }

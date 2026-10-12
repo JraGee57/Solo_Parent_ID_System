@@ -1,0 +1,22 @@
+# Applicant-uploaded documents (and their temporary in-progress drafts)
+# contain personal information and must never be committed to version
+# control. The application creates these folders on demand at runtime;
+# nothing under here needs to be tracked.
+/storage/uploads/*
+
+# Applicant profile photos (personal data) and full database dumps
+# (every table, including password hashes) -- never commit either.
+/storage/avatars/*
+/storage/db_backups/*
+
+# Staff-uploaded or generated files; only the placeholder that keeps the folder is tracked.
+/storage/staff/*
+!/storage/staff/.gitkeep
+
+# Machine-specific settings (may hold real credentials) and runtime logs.
+/config/local.php
+/storage/logs/*
+/storage/sessions/*
+
+# Composer dependencies: recreate with "composer install" (versions pinned in composer.lock).
+/vendor/
